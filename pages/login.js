@@ -15,7 +15,7 @@ function login() {
       <Image
           className="landing-image" // Change to className="landing-image" if it's a GIF
           src={GIF}
-          alt="Landing Page Image" width={100} height={100}
+          alt="Landing Page Image" 
         />
       </div>
     </div>
