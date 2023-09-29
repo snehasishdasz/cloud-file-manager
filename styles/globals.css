@@ -34,17 +34,17 @@
   }
 } */
 
-/* YourComponent.css */
 
-/* Reset some default styles */
-body, h1, p {
+
+
+/* body, h1, p {
   margin: 0;
   padding: 0;
 }
 
-/* Apply a background color */
+
 body {
-  background: linear-gradient(-45deg, #041BD3, #0A0E0C, #800c1a, #14174A,#630E1B);
+  background: linear-gradient(-45deg, #041BD3, #0A0E0C, #621b77, #14174A,#630E1B);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -67,7 +67,7 @@ body {
   }
 }
 
-/* Container for split-screen layout */
+
 .container {
   display: flex;
   max-width: 1200px;
@@ -77,14 +77,14 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Left side with text */
+
 .left-side {
   flex: 1;
   padding: 40px;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Vertically center children */
-  align-items: center; /* Horizontally center children */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .left-side h1 {
@@ -99,7 +99,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* Right side with image */
+
 .right-side {
   flex: 1;
   overflow: hidden;
@@ -113,11 +113,11 @@ body {
   object-position: center;
 }
 
-/* Style the button */
+
 .cta-button {
   display: block;
   padding: 15px 30px;
-  background-color: #3498db;
+  background-color: #0063a5;
   color: #fff;
   font-size: 18px;
   text-align: center;
@@ -129,4 +129,4 @@ body {
 
 .cta-button:hover {
   background-color: #2980b9;
-}
+} */
