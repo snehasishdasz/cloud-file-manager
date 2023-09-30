@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import menu from "../data/menu.js";
+
 function SideNavBar() {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="w-[200px] bg-gray-800 h-screen sticky top-0 z-10 p-5 shadow-blue-600 shadow-md">
-      <div className="flex justify-center">
-        <Image src="/logo_cloud.png" alt="logo" width={150} height={60} />
+      <div className="flex justify-center mt-4">
+        <Image src="/logo-3.png" alt="logo" width={150} height={30} />
       </div>
-      <button className="flex gap-2 items-center bg-blue-500 p-2 text-white rounded-md px-3 mt-5 hover:scale-105 transition-all">
+      <button className="flex gap-2 items-center bg-blue-500 p-2 text-white rounded-md px-3 mt-10 hover:scale-105 w-full transition-all justify-center text-[14px]">
         Add New File
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,10 +26,50 @@ function SideNavBar() {
           />
         </svg>
       </button>
-      <button className="flex gap-2 items-center bg-blue-500 p-2 text-white rounded-md px-3 mt-5 hover:scale-105 transition-all">New Folder <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M12 10.5v6m3-3H9m4.06-7.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
-</svg>
-</button>
+      <button className="flex gap-2 items-center bg-yellow-500 p-2 text-white rounded-md px-3 mt-2 hover:scale-105 w-full transition-all justify-center text-[15px]">
+        New Folder{" "}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 10.5v6m3-3H9m4.06-7.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
+          />
+        </svg>
+      </button>
+
+      <div>
+        {menu.list.map((item,index) => (
+          <h2
+          onClick={()=>setActiveIndex(index)}
+            className={`flex gap-2 items-center p-2 mt-6 text-white hover:bg-blue-200 hover:text-black border-r-2 border-l-2 justify-center cursor-pointer ${
+              activeIndex == index ? "bg-blue-200 text-black" : null
+            }`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d={item.logo}
+              />
+            </svg>
+            {item.name}
+          </h2>
+        ))}
+      </div>
     </div>
   );
 }
