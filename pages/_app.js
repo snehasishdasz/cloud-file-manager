@@ -9,8 +9,17 @@ export default function App({
 }) {
   return (
     <SessionProvider session={session}>
-    <SideNavBar/>
-      <Component {...pageProps} />
+    <div className='flex'>
+      <SideNavBar/>
+      <div className='grid grid-cols-1 md:grid-cols-3 w-full'>
+        <div className='col-span-2'>
+          <Component {...pageProps} />
+        </div>
+        <div className='bg-gray-800 p-5'>
+          Storage
+        </div>
+      </div>
+    </div>
     </SessionProvider>
   )
 }

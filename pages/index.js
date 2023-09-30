@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import { useSession } from 'next-auth/react'
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Searchbar from '@/components/Searchbar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,9 +20,8 @@ export default function Home() {
     }
   },[session]);
   return (
-    <h1 className="text-3xl font-bold underline text-blue-500 ">
-      Hello world!
-      <button class="btn btn-primary">Primary</button>
-    </h1>
+    <div className='p-5'>
+      <Searchbar/>
+    </div>
   )
 }
