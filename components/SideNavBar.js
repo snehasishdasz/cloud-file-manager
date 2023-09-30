@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import menu from "../data/menu.js";
+import CreateFolderModal from "./Folder/CreateFolderModal.js";
 
 function SideNavBar() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -70,6 +71,17 @@ function SideNavBar() {
           </h2>
         ))}
       </div>
+      {/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
+<dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">Press ESC key or click the button below to close</p>
+    <div className="modal-action">
+      <CreateFolderModal/>
+    </div>
+  </div>
+</dialog>
     </div>
   );
 }

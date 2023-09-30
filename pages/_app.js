@@ -1,3 +1,4 @@
+import CreateFolderModal from '@/components/Folder/CreateFolderModal'
 import SideNavBar from '@/components/SideNavBar'
 import '@/styles/globals.css'
 
@@ -18,6 +19,9 @@ export default function App({
         <div className='bg-gray-800 p-5'>
           Storage
         </div>
+      </div>
+      <div>
+        <CreateFolderModal/>
       </div>
     </div>
     </SessionProvider>
