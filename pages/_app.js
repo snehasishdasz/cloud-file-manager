@@ -21,7 +21,7 @@ export default function App({
         </div>
       </div>
       <div>
-        <CreateFolderModal/>
+        
       </div>
     </div>
     </SessionProvider>

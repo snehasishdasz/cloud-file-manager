@@ -27,8 +27,8 @@ function SideNavBar() {
           />
         </svg>
       </button>
-      <button className="flex gap-2 items-center bg-yellow-500 p-2 text-white rounded-md px-3 mt-2 hover:scale-105 w-full transition-all justify-center text-[15px]">
-        New Folder{" "}
+      <button className="flex gap-2 items-center bg-yellow-500 p-2 text-white rounded-md px-3 mt-2 hover:scale-105 w-full transition-all justify-center text-[14px]" onClick={() => document.getElementById("my_modal_3").showModal()}>
+        Create Folder
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -50,7 +50,7 @@ function SideNavBar() {
           <h2
           onClick={()=>setActiveIndex(index)}
             className={`flex gap-2 items-center p-2 mt-6 text-white hover:bg-blue-200 hover:text-black border-r-2 border-l-2 justify-center cursor-pointer ${
-              activeIndex == index ? "bg-blue-200 text-black" : null
+              activeIndex == index ? "bg-blue-200 text-blue-950 " : null
             }`}
           >
             <svg
@@ -71,17 +71,10 @@ function SideNavBar() {
           </h2>
         ))}
       </div>
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
-<button className="btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
-<dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-  <div className="modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">Press ESC key or click the button below to close</p>
-    <div className="modal-action">
-      <CreateFolderModal/>
-    </div>
-  </div>
-</dialog>
+      
+      <dialog id="my_modal_3" className="modal">
+        <CreateFolderModal/>
+      </dialog>
     </div>
   );
 }
