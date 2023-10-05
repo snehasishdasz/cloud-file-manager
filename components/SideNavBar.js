@@ -50,7 +50,7 @@ function SideNavBar() {
           <h2
           onClick={()=>setActiveIndex(index)}
             className={`flex gap-2 items-center p-2 mt-6 text-white hover:bg-blue-200 hover:text-black border-r-2 border-l-2 justify-center cursor-pointer ${
-              activeIndex == index ? "bg-blue-200 text-blue-950 " : null
+              activeIndex == index ? "bg-blue-200 text-red-950 " : null
             }`}
           >
             <svg

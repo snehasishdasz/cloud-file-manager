@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import {app} from "../../Config/FirebaseConfig";
+import { doc, getFirestore, setDoc } from "firebase/firestore";
+import { useSession } from "next-auth/react";
 
 function CreateFolderModal() {
+  const docID = Date.now().toString();
   const[folderName,setFolderName] = useState();
-  const onCreate = (e) => {
+  const{data:session}=useSession();
+  const db = getFirestore(app);
+  const onCreate = async (e) => {
     console.log(folderName);
+    await setDoc(doc(db,"Folders",docID),{
+      name: folderName,
+      id:docID,
+      createBy:session.user.email
+    })
   }
   return (
     <div>
