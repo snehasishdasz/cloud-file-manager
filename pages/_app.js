@@ -5,14 +5,16 @@ import { ShowToastContext } from '@/context/ShowToastContext'
 import '@/styles/globals.css'
 
 import { SessionProvider } from "next-auth/react"
+import { useState } from 'react'
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }) {
+  const[showToastMsg,setShowToastMsg]=useState();
   return (
     <SessionProvider session={session}>
-    <ShowToastContext>
+    <ShowToastContext.Provider value={{showToastMsg,setShowToastMsg}}>
     <div className='flex'>
       <SideNavBar/>
       <div className='grid grid-cols-1 md:grid-cols-3 w-full'>
@@ -23,12 +25,9 @@ export default function App({
           Storage
         </div>
       </div>
-      <div>
-        
-      </div>
     </div>
-    <Toast/> 
-    </ShowToastContext>
+    {showToastMsg?<Toast msg={showToastMsg} />:null}
+    </ShowToastContext.Provider>
     </SessionProvider>
   )
 }
