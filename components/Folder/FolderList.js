@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import FolderItem from './FolderItem'
 import { useRouter } from 'next/router';
+import FolderItemSmall from './FolderItemSmall';
 
-function FolderList({folderList}) {
+function FolderList({folderList,isBig=true}) {
     const [activeFolder, setActiveFolder] = useState();
     const router = useRouter();
 //     const folderList=[
@@ -40,9 +41,11 @@ const onFolderClick = (index,item) =>{
 
   return (
     <div className='p-5 mt-5 bg-white rounded-lg'>
+    {isBig? 
         <h2 className='text-[17px] font-bold items-center text-gray-600'>Recent Folders
         <span className='float-right text-blue-600 font-normal text-[16px] cursor-pointer'>View All</span>
-        </h2>
+        </h2>:null}
+        {isBig?
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-3 gap-4'>
             {folderList.map((item,index)=>(
                 <div onClick={()=>onFolderClick(index,item)}>
@@ -50,6 +53,19 @@ const onFolderClick = (index,item) =>{
                 </div>
             ))}
         </div>
+        :
+        <div
+      className=" 
+      "
+    >
+      {folderList.map((item, index) => (
+        <div key={index} onClick={() => onFolderClick(index, item)}>
+      <FolderItemSmall folder={item} />
+        
+        </div>
+      ))}
+    </div>
+      }
     </div>
   )
 }

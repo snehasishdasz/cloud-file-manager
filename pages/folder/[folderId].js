@@ -46,7 +46,13 @@ function FolderDetails() {
     <Searchbar/>
     <h2 className="text-[20px] text-white font-bold mt-5">{name}</h2>
     
-    <FolderList folderList={folderList}  />
+    {folderList.length>0 ? <FolderList 
+      folderList={folderList}
+        isBig={false}/>
+        :<h2 className='text-white justify-center text-center
+        text-[30px] mt-5 bg-black'>No Folder Found</h2>
+        }
+    
     
     </div>
   )
