@@ -1,6 +1,7 @@
 import CreateFolderModal from '@/components/Folder/CreateFolderModal'
 import SideNavBar from '@/components/SideNavBar'
 import Toast from '@/components/Toast'
+import { ParentFolderContext } from '@/context/ParentFolderIdContext'
 import { ShowToastContext } from '@/context/ShowToastContext'
 import '@/styles/globals.css'
 
@@ -12,8 +13,10 @@ export default function App({
   pageProps: { session, ...pageProps },
 }) {
   const[showToastMsg,setShowToastMsg]=useState();
+  const[parentFolderId,setParentFolderId]=useState();
   return (
     <SessionProvider session={session}>
+    <ParentFolderContext.Provider value={{parentFolderId,setParentFolderId}}>
     <ShowToastContext.Provider value={{showToastMsg,setShowToastMsg}}>
     <div className='flex'>
       <SideNavBar/>
@@ -28,6 +31,7 @@ export default function App({
     </div>
     {showToastMsg?<Toast msg={showToastMsg} />:null}
     </ShowToastContext.Provider>
+    </ParentFolderContext.Provider>
     </SessionProvider>
   )
 }

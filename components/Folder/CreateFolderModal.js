@@ -4,6 +4,7 @@ import {app} from "../../Config/FirebaseConfig";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { ShowToastContext } from "@/context/ShowToastContext";
+import { ParentFolderContext } from "@/context/ParentFolderIdContext";
 
 function CreateFolderModal() {
   const docID = Date.now().toString();
@@ -13,6 +14,7 @@ function CreateFolderModal() {
   const {showToastMsg,setShowToastMsg} = useContext(ShowToastContext);
 
   const{data:session}=useSession();
+  const{parentFolderId,setParentFolderId}=useContext(ParentFolderContext);
 
   const db = getFirestore(app);
   const onCreate = async (e) => {
@@ -20,7 +22,8 @@ function CreateFolderModal() {
     await setDoc(doc(db,"Folders",docID),{
       name: folderName,
       id:docID,
-      createBy:session.user.email
+      createBy:session.user.email,
+      parentFolderId:parentFolderId
     })
     setShowToastMsg('Folder Created')
   }
@@ -29,7 +32,7 @@ function CreateFolderModal() {
       <div className="modal-box bg-gray-600 text-black w-full">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 bg-white hover:bg-red-400">
               ✕
             </button>
             <div className='w-full flex flex-col justify-center items-center gap-3 '>
