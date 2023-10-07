@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import menu from "../data/menu.js";
 import CreateFolderModal from "./Folder/CreateFolderModal.js";
+import UploadFileModal from "./File/UploadFileModal.js";
 
 function SideNavBar() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -10,7 +11,7 @@ function SideNavBar() {
       <div className="flex justify-center mt-4">
         <Image src="/logo-3.png" alt="logo" width={150} height={30} />
       </div>
-      <button className="flex gap-2 items-center bg-blue-500 p-2 text-white rounded-md px-3 mt-10 hover:scale-105 w-full transition-all justify-center text-[14px]">
+      <button onClick={()=>window.upload_file.showModal()} className="flex gap-2 items-center bg-blue-500 p-2 text-white rounded-md px-3 mt-10 hover:scale-105 w-full transition-all justify-center text-[14px]">
         Add New File
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -75,6 +76,10 @@ function SideNavBar() {
       <dialog id="my_modal_3" className="modal">
         <CreateFolderModal/>
       </dialog>
+      <dialog id="upload_file" className="modal">
+            <UploadFileModal 
+            closeModal={()=>window.upload_file.close()}/>
+        </dialog>
     </div>
   );
 }
