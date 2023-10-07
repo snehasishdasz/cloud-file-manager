@@ -27,9 +27,15 @@ function FolderList({folderList}) {
 //           name:'Folder 4'
 //       },
 //   ]
-const onFolderClick = (index,folderId) =>{
+const onFolderClick = (index,item) =>{
     setActiveFolder(index);
-    router.push("/folder/"+folderId)
+    router.push({
+        pathname:"/folder/"+item.id,
+        query:{
+                name:item.name,
+                id:item.id
+            }
+    })
 }
 
   return (
@@ -39,7 +45,7 @@ const onFolderClick = (index,folderId) =>{
         </h2>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-3 gap-4'>
             {folderList.map((item,index)=>(
-                <div onClick={()=>onFolderClick(index,item.id)}>
+                <div onClick={()=>onFolderClick(index,item)}>
                 <FolderItem folder={item}/>
                 </div>
             ))}
