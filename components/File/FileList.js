@@ -1,42 +1,42 @@
 import React, { useContext } from 'react'
 import FileItem from "./FileItem"
 
-function FileList({filelist}) {
-    const fileList=[
-        {
-            id:1,
-            name:'UX Principal.docx',
-            image:"/docx.png",
-            type:'doc',
-            size:'6272 kB',
-            modifiedAt:'Nov 23,2020'
-        },
-        {
-            id:2,
-            name:'Data Structure.pdf',
-            image:"/pdf.png",
-            type:'pdf',
-            size:'672 kB',
-            modifiedAt:'Nov 23,2022'
-        },
-        {
-            id:3,
-            name:'smaple Image.png',
-            image:"/jpg.png",
-            type:'image',
-            size:'400 kB',
-            modifiedAt:'Nov 23,2023'
-        },
-        {
-            id:4,
-            name:'React Principal.docx',
-            image:"/docx.png",
-            type:'doc',
-            size:'6272 kB',
-            modifiedAt:'Nov 23,2020'
-        },
+function FileList({fileList}) {
+    // const fileList=[
+    //     {
+    //         id:1,
+    //         name:'UX Principal.docx',
+    //         image:"/docx.png",
+    //         type:'doc',
+    //         size:'6272 kB',
+    //         modifiedAt:'Nov 23,2020'
+    //     },
+    //     {
+    //         id:2,
+    //         name:'Data Structure.pdf',
+    //         image:"/pdf.png",
+    //         type:'pdf',
+    //         size:'672 kB',
+    //         modifiedAt:'Nov 23,2022'
+    //     },
+    //     {
+    //         id:3,
+    //         name:'smaple Image.png',
+    //         image:"/jpg.png",
+    //         type:'image',
+    //         size:'400 kB',
+    //         modifiedAt:'Nov 23,2023'
+    //     },
+    //     {
+    //         id:4,
+    //         name:'React Principal.docx',
+    //         image:"/docx.png",
+    //         type:'doc',
+    //         size:'6272 kB',
+    //         modifiedAt:'Nov 23,2020'
+    //     },
         
-    ]
+    // ]
    
   return (
     <div className='bg-white mt-5 p-5
@@ -58,8 +58,11 @@ function FileList({filelist}) {
             
             </div>
         </div>
-        {fileList.map((item,index)=>(
+        {fileList&&fileList.map((item,index)=>(
+            <div key={index}>
             <FileItem file={item} key={index}/> 
+
+            </div>
         ))}
     </div>
   )
