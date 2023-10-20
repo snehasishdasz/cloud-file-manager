@@ -3,10 +3,15 @@ import Image from "next/image";
 import menu from "../data/menu.js";
 import CreateFolderModal from "./Folder/CreateFolderModal.js";
 import UploadFileModal from "./File/UploadFileModal.js";
+import { useSession } from "next-auth/react";
+
+
 
 function SideNavBar() {
+  const {data:session}=useSession()
   const [activeIndex, setActiveIndex] = useState(0);
-  return (
+
+  return  (
     <div className="w-[200px] bg-gray-800 h-screen sticky top-0 z-10 p-5 shadow-blue-600 shadow-md">
       <div className="flex justify-center mt-4">
         <Image src="/logo-3.png" alt="logo" width={150} height={30} />
