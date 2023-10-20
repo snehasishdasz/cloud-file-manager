@@ -20,8 +20,10 @@ function login() {
       <div className="left-side">
         <h1>Cloud Castle</h1>
         <p>"Store data across devices using our cloud platform."</p>
+        
         <button className="cta-button" onClick={()=>signIn()}>
-          Login with Google
+        <Image src="/google.png" alt='google' width={200} height={200} />
+          
         </button>
       </div>
       <div className="right-side">
