@@ -1,7 +1,21 @@
+import { app } from "@/Config/FirebaseConfig";
+import { ShowToastContext } from "@/context/ShowToastContext";
+import { deleteDoc, doc, getFirestore } from "firebase/firestore";
+import moment from "moment/moment";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 
 function FileItem({ file }) {
+
+  const db=getFirestore(app)
+  const image="/" + file.type + ".png"
+    const {showToastMsg,setShowToastMsg}=useContext(ShowToastContext)
+    const deleteFile=async(file)=>{
+      await deleteDoc(doc(db,"files",file.id.toString())).then(resp=>{
+              setShowToastMsg('File Deleted!!!')
+      })
+  }
+
   return (
     <div
       className="grid grid-cols-1
@@ -10,7 +24,7 @@ function FileItem({ file }) {
     p-3 rounded-md text-black"
     >
       <div className="flex gap-2 items-center">
-        <Image src={file.image} alt="file-icon" width={26} height={20} on />
+        <Image src={image} alt="file-icon" width={26} height={20} on />
         <h2
           className="text-[15px] truncate"
           onClick={()=>window.open(file.imageUrl)}
@@ -21,15 +35,13 @@ function FileItem({ file }) {
       <div className="grid grid-cols-3 place-content-start">
         <h2 className="text-[15px]">
           {/* {moment(file.modifiedAt).format("MMMM DD, YYYY")} */}
-          {/* {moment(file.modifiedAt).format("MMMM DD, YYYY")} */}
-          {file.modifiedAt}
+          {moment(file.modifiedAt).format("MMMM DD, YYYY")}
         </h2>
 
         <h2 className="text-[15px]">
           {/* {(file.size / 1024 ** 2).toFixed(2) + " MB"} */}
-          {/* {(file.size / 1024 ** 2).toFixed(2) + " MB"} */}
-          {file.size}
-          <svg
+          {(file.size / 1024 ** 2).toFixed(2) + " MB"}
+          <svg onClick={()=>deleteFile(file)}
             fill="none" viewBox="0 0 24 24" 
           strokeWidth={1.5} stroke="currentColor"
            className="w-5 h-5 float-right text-red-500
