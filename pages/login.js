@@ -10,7 +10,7 @@ function login() {
   const router = useRouter();
   useEffect(()=>{
     console.log("User Session")
-    if(!session)
+    if(session)
     {
       router.push("/")
     }
