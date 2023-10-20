@@ -11,7 +11,7 @@ function SideNavBar() {
   const {data:session}=useSession()
   const [activeIndex, setActiveIndex] = useState(0);
 
-  return  (
+  return session && (
     <div className="w-[200px] bg-gray-800 h-screen sticky top-0 z-10 p-5 shadow-blue-600 shadow-md">
       <div className="flex justify-center mt-4">
         <Image src="/logo-3.png" alt="logo" width={150} height={30} />

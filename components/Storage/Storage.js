@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react'
 
 function Storage() {
   const {data:session}=useSession();
-  return (
+  return session&&(
     <div>
         <UserInfo/>
         <StorageInfo/>

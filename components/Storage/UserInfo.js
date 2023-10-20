@@ -1,4 +1,4 @@
-import {  useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import React from "react";
 
@@ -32,7 +32,7 @@ function UserInfo() {
               strokeWidth={1.5}
               stroke="currentColor"
               className="w-6 h-6"
-              
+              onClick={()=>signOut()}
             >
               <path
                 strokeLinecap="round"
