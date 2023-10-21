@@ -113,8 +113,9 @@
 
 .ctabutton {
   display: block;
-  padding: 15px 30px;
-  background-color: #0063a5;
+  padding: 5px 5px;
+  /* background-color: rgb(107, 107, 107); */
+  background: linear-gradient(90deg, #ff2f00, #ffea00, #05a200, #0098cb);
   color: #fff;
   font-size: 18px;
   text-align: center;
@@ -125,5 +126,7 @@
 }
 
 .ctabutton:hover {
-  background-color: #2980b9;
+  /* background-color: #2980b9; */
+  background: linear-gradient(45deg, #0098cb, #ff2f00, #ffea00, #05a200);
+  transform: scale(1.05);
 }

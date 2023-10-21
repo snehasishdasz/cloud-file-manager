@@ -84,6 +84,17 @@ function StorageMSG() {
           </a>
         </li>
 
+        <li>
+          <a
+            href="#"
+            className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+          >
+      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="40px" height="40px"><path fill="#E91E63" d="M19 24A9 9 0 1 0 19 42A9 9 0 1 0 19 24Z"/><path fill="#E91E63" d="M24 6L24 33 28 33 28 14 39 17 39 10z"/></svg>
+
+            <span className="flex-1 ml-3 whitespace-nowrap">Music</span>
+          </a>
+        </li>
+
         
         {/* Repeat the same structure for other wallet providers */}
       </ul>
