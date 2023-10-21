@@ -4,6 +4,7 @@ import menu from "../data/menu.js";
 import CreateFolderModal from "./Folder/CreateFolderModal.js";
 import UploadFileModal from "./File/UploadFileModal.js";
 import { useSession } from "next-auth/react";
+import Link from "next/link.js";
 
 
 
@@ -14,7 +15,10 @@ function SideNavBar() {
   return session && (
     <div className="w-[200px] bg-gray-800 h-screen sticky top-0 z-10 p-5 shadow-blue-600 shadow-md">
       <div className="flex justify-center mt-4">
+      <Link href="/">
         <Image src="/logo-3.png" alt="logo" width={150} height={30} />
+
+      </Link>
       </div>
       <button onClick={()=>window.upload_file.showModal()} className="flex gap-2 items-center bg-blue-500 p-2 text-white rounded-md px-3 mt-10 hover:scale-105 w-full transition-all justify-center text-[14px]">
         Add New File
@@ -55,8 +59,8 @@ function SideNavBar() {
         {menu.list.map((item,index) => (
           <h2
           onClick={()=>setActiveIndex(index)}
-            className={`flex gap-2 items-center p-2 mt-6 text-white hover:bg-blue-200 hover:text-black border-r-2 border-l-2 justify-center cursor-pointer ${
-              activeIndex == index ? "bg-blue-200 text-red-950 " : null
+            className={`flex gap-2 items-center p-2 mt-6 text-white hover:bg-blue-300 hover:text-black border-r-2 border-l-2 justify-center cursor-pointer ${
+              activeIndex == index ? "bg-blue-300 text-red-950 " : "text-black"
             }`}
           >
             <svg

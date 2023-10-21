@@ -4,18 +4,18 @@ import React from "react";
 
 function StorageMSG() {
   return (
-    <div className="w-full  p-2 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 items-center justify-center mt-5">
+    <div className="w-full  p-1 bg-white border border-gray-200 rounded-lg shadow sm:p-4 dark:bg-gray-800 dark:border-gray-700 items-center justify-center mt-5">
       <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
         What is It?
       </h5>
       <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
         Create Simple Folders and subFolder. Upload your Files and manymore😀.
       </p>
-      <ul className="my-0 space-y-3">
+      <ul className="my-0 space-y-[-9px]">
         <li>
           <a
             href="#"
-            className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+            className="flex items-center p-1 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
           >
             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="40px" height="40px"><path fill="#f44336" d="M37,24h-6.936C26.715,24,24,21.285,24,17.936V0.573c0-0.219,0.26-0.333,0.421-0.184L37,12V24z"/><path fill="#ad1457" d="M37,24h-6.936c-1.436,0-2.755-0.499-3.794-1.333L37,12V24z"/><path fill="#8bc34a" d="M11,24h6.936C21.285,24,24,26.715,24,30.064v17.362c0,0.219-0.26,0.333-0.421,0.184L11,36V24z"/><path fill="#009688" d="M11,24h6.936c1.436,0,2.755,0.499,3.794,1.333L11,36V24z"/><path fill="#ffc107" d="M24,11v6.936C24,21.285,21.285,24,17.936,24H0.573c-0.219,0-0.333-0.26-0.184-0.421L12,11H24z"/><path fill="#ff9800" d="M24,11v6.936c0,1.436-0.499,2.755-1.333,3.794L12,11H24z"/><path fill="#448aff" d="M24,37v-6.936C24,26.715,26.715,24,30.064,24h17.362c0.219,0,0.333,0.26,0.184,0.421L36,37H24z"/><path fill="#1565c0" d="M24,37v-6.936c0-1.436,0.499-2.755,1.333-3.794L36,37H24z"/></svg>
             <span className="flex-1 ml-3 whitespace-nowrap">Image</span>

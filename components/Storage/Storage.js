@@ -1,9 +1,10 @@
 import React from 'react'
 import UserInfo from './UserInfo'
 import StorageInfo from './StorageInfo'
-import StorageUpgradeMsg from './StorageUpgradeMsg'
+
 import StorageMSG from './StorageMSG'
 import { useSession } from 'next-auth/react'
+import CreatedBy from './CreatedBy'
 
 function Storage() {
   const {data:session}=useSession();
@@ -12,7 +13,7 @@ function Storage() {
         <UserInfo/>
         <StorageInfo/>
         <StorageMSG/>
-        <StorageUpgradeMsg/>
+        <CreatedBy/>
     </div>
   )
 }
