@@ -11,7 +11,7 @@ function StorageMSG() {
       <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
         Create Simple Folders and subFolder. Upload your Files and manymore😀.
       </p>
-      <ul className="my-0 space-y-[-9px]">
+      <ul className="my-2 space-y-[-1px] grid grid-cols-3">
         <li>
           <a
             href="#"
@@ -29,8 +29,8 @@ function StorageMSG() {
           >
            <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="35px"
-              height="35px"
+              width="30px"
+              height="30px"
               viewBox="0 0 100 100"
             >
               <circle cx="50" cy="50" r="48" fill="#0074D9" />
@@ -92,6 +92,30 @@ function StorageMSG() {
       <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="40px" height="40px"><path fill="#E91E63" d="M19 24A9 9 0 1 0 19 42A9 9 0 1 0 19 24Z"/><path fill="#E91E63" d="M24 6L24 33 28 33 28 14 39 17 39 10z"/></svg>
 
             <span className="flex-1 ml-3 whitespace-nowrap">Music</span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#"
+            className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+          >
+      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="40px" height="40px"><path fill="#169154" d="M29,6H15.744C14.781,6,14,6.781,14,7.744v7.259h15V6z"/><path fill="#18482a" d="M14,33.054v7.202C14,41.219,14.781,42,15.743,42H29v-8.946H14z"/><path fill="#0c8045" d="M14 15.003H29V24.005000000000003H14z"/><path fill="#17472a" d="M14 24.005H29V33.055H14z"/><g><path fill="#29c27f" d="M42.256,6H29v9.003h15V7.744C44,6.781,43.219,6,42.256,6z"/><path fill="#27663f" d="M29,33.054V42h13.257C43.219,42,44,41.219,44,40.257v-7.202H29z"/><path fill="#19ac65" d="M29 15.003H44V24.005000000000003H29z"/><path fill="#129652" d="M29 24.005H44V33.055H29z"/></g><path fill="#0c7238" d="M22.319,34H5.681C4.753,34,4,33.247,4,32.319V15.681C4,14.753,4.753,14,5.681,14h16.638 C23.247,14,24,14.753,24,15.681v16.638C24,33.247,23.247,34,22.319,34z"/><path fill="#fff" d="M9.807 19L12.193 19 14.129 22.754 16.175 19 18.404 19 15.333 24 18.474 29 16.123 29 14.013 25.07 11.912 29 9.526 29 12.719 23.982z"/></svg>
+
+            <span className="flex-1 ml-3 whitespace-nowrap">Excel</span>
+          </a>
+        </li>
+
+
+        <li>
+          <a
+            href="#"
+            className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+          >
+         
+          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="40px" height="40px"><linearGradient id="Ja~RXCbVqNAHlfRcVj7wMa" x1="24" x2="24" y1="18" y2="30" gradientUnits="userSpaceOnUse"><stop offset=".233" stop-color="#41a5ee"/><stop offset=".317" stop-color="#3994de"/><stop offset=".562" stop-color="#2366b4"/><stop offset=".751" stop-color="#154a9b"/><stop offset=".86" stop-color="#103f91"/></linearGradient><rect width="36" height="12" x="6" y="18" fill="url(#Ja~RXCbVqNAHlfRcVj7wMa)"/><linearGradient id="Ja~RXCbVqNAHlfRcVj7wMb" x1="24" x2="24" y1="6" y2="18" gradientUnits="userSpaceOnUse"><stop offset=".233" stop-color="#e8457c"/><stop offset=".272" stop-color="#e14177"/><stop offset=".537" stop-color="#b32c59"/><stop offset=".742" stop-color="#971e46"/><stop offset=".86" stop-color="#8c193f"/></linearGradient><path fill="url(#Ja~RXCbVqNAHlfRcVj7wMb)" d="M42,18H6V8c0-1.105,0.895-2,2-2h32c1.105,0,2,0.895,2,2V18z"/><linearGradient id="Ja~RXCbVqNAHlfRcVj7wMc" x1="24" x2="24" y1="30" y2="42" gradientUnits="userSpaceOnUse"><stop offset=".233" stop-color="#33c481"/><stop offset=".325" stop-color="#2eb173"/><stop offset=".566" stop-color="#228353"/><stop offset=".752" stop-color="#1b673f"/><stop offset=".86" stop-color="#185c37"/></linearGradient><path fill="url(#Ja~RXCbVqNAHlfRcVj7wMc)" d="M40,42H8c-1.105,0-2-0.895-2-2V30h36v10C42,41.105,41.105,42,40,42z"/><rect width="14" height="36" x="17" y="6" opacity=".05"/><rect width="13" height="36" x="17.5" y="6" opacity=".07"/><linearGradient id="Ja~RXCbVqNAHlfRcVj7wMd" x1="24" x2="24" y1="6" y2="42" gradientUnits="userSpaceOnUse"><stop offset=".039" stop-color="#f8c819"/><stop offset=".282" stop-color="#af4316"/></linearGradient><rect width="12" height="36" x="18" y="6" fill="url(#Ja~RXCbVqNAHlfRcVj7wMd)"/><linearGradient id="Ja~RXCbVqNAHlfRcVj7wMe" x1="24" x2="24" y1="12" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eaad29"/><stop offset=".245" stop-color="#d98e24"/><stop offset=".632" stop-color="#c0631c"/><stop offset=".828" stop-color="#b75219"/><stop offset=".871" stop-color="#a94917"/><stop offset=".949" stop-color="#943b13"/><stop offset="1" stop-color="#8c3612"/></linearGradient><path fill="url(#Ja~RXCbVqNAHlfRcVj7wMe)" d="M24,12c-3.314,0-6,2.686-6,6v24h12V18C30,14.686,27.314,12,24,12z"/><path d="M20,32c-0.73,0-1.41-0.2-2-0.55v1.14c0.61,0.26,1.29,0.41,2,0.41h8c0.71,0,1.39-0.15,2-0.41v-1.14 C29.41,31.8,28.73,32,28,32H20z M29,22v6c0,0.55-0.45,1-1,1h-2v-2c0-1.1-0.9-2-2-2s-2,0.9-2,2v2h-2c-0.55,0-1-0.45-1-1v-6 c0-0.55-0.45-1-1-1v7c0,1.1,0.9,2,2,2h3v-3c0-0.55,0.45-1,1-1s1,0.45,1,1v3h3c1.1,0,2-0.9,2-2v-7C29.45,21,29,21.45,29,22z" opacity=".05"/><path d="M29.5,22v6c0,0.83-0.67,1.5-1.5,1.5h-2.5V27c0-0.83-0.67-1.5-1.5-1.5s-1.5,0.67-1.5,1.5v2.5H20 c-0.83,0-1.5-0.67-1.5-1.5v-6c0-0.28-0.22-0.5-0.5-0.5V28c0,1.1,0.9,2,2,2h3v-3c0-0.55,0.45-1,1-1s1,0.45,1,1v3h3c1.1,0,2-0.9,2-2 v-6.5C29.72,21.5,29.5,21.72,29.5,22z M20,32c-0.73,0-1.41-0.2-2-0.55v0.58c0.6,0.3,1.28,0.47,2,0.47h8c0.72,0,1.4-0.17,2-0.47 v-0.58C29.41,31.8,28.73,32,28,32H20z" opacity=".07"/><linearGradient id="Ja~RXCbVqNAHlfRcVj7wMf" x1="24" x2="24" y1="21" y2="32" gradientUnits="userSpaceOnUse"><stop offset=".613" stop-color="#e6e6e6"/><stop offset=".785" stop-color="#e4e4e4"/><stop offset=".857" stop-color="#ddd"/><stop offset=".91" stop-color="#d1d1d1"/><stop offset=".953" stop-color="#bfbfbf"/><stop offset=".967" stop-color="#b8b8b8"/></linearGradient><path fill="url(#Ja~RXCbVqNAHlfRcVj7wMf)" d="M32,23v5c0,2.2-1.8,4-4,4h-8c-2.2,0-4-1.8-4-4v-5c0-1.105,0.895-2,2-2h0v7 c0,1.105,0.895,2,2,2h3v-3c0-0.552,0.448-1,1-1h0c0.552,0,1,0.448,1,1v3h3c1.105,0,2-0.895,2-2v-7C31.1,21,32,21.9,32,23z"/></svg>
+
+            <span className="flex-1 ml-3 whitespace-nowrap">RAR</span>
           </a>
         </li>
 

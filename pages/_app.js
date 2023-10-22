@@ -1,7 +1,6 @@
 import CreateFolderModal from '@/components/Folder/CreateFolderModal'
 import SideNavBar from '@/components/SideNavBar'
 import Storage from '@/components/Storage/Storage'
-// import StorageUpgradeMsg from '@/components/Storage/StorageUpgradeMsg'
 import Toast from '@/components/Toast'
 import { ParentFolderContext } from '@/context/ParentFolderIdContext'
 import { ShowToastContext } from '@/context/ShowToastContext'
@@ -18,6 +17,7 @@ export default function App({
 }) {
   const[showToastMsg,setShowToastMsg]=useState();
   const[parentFolderId,setParentFolderId]=useState();
+
   return (
     <SessionProvider session={session}>
     <ParentFolderContext.Provider value={{parentFolderId,setParentFolderId}}>
@@ -32,9 +32,7 @@ export default function App({
         <div className='bg-gray-800 p-5 order-first md:order-last'>
           <Storage/>
         </div>
-        {/* <div className='bg-gray-800 p-5 order-last md:order-last'>
-          <StorageUpgradeMsg/>
-        </div> */}
+        
       
       </div>
     </div>

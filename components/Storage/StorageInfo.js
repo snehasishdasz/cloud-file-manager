@@ -43,10 +43,10 @@ function StorageInfo() {
 
 
   return (
-    <div className='mt-7'>
+    <div className='mt-7 bg-blue-200 p-2 rounded-lg'>
      <h2
         className="text-[22px] 
-       font-bold text-white"
+       font-bold text-black"
       >
         {totalSizeUsed} {" "}
         <span
@@ -61,6 +61,7 @@ function StorageInfo() {
         <div className='bg-blue-700 h-2.5 w-[25%]'></div>
         <div className='bg-red-700 h-2.5 w-[35%]'></div>
         <div className='bg-green-800 h-2.5 w-[15%]'></div>
+        <div className='bg-yellow-300 h-2.5 w-[10%]'></div>
     </div>
     </div>
   )
