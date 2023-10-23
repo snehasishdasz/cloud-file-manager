@@ -58,10 +58,11 @@ function StorageInfo() {
         2 GB
       </h2>
     <div className='w-full bg-gray-200  h-2.5 flex'>
-        <div className='bg-blue-700 h-2.5 w-[25%]'></div>
-        <div className='bg-red-700 h-2.5 w-[35%]'></div>
-        <div className='bg-green-800 h-2.5 w-[15%]'></div>
-        <div className='bg-yellow-300 h-2.5 w-[10%]'></div>
+        <div className='bg-blue-700 h-2.5 w-[25%] border-l-2 border-black border-b-2 border-t-2'></div>
+        <div className='bg-red-700 h-2.5 w-[35%]  border-black border-b-2 border-t-2'></div>
+        <div className='bg-green-800 h-2.5 w-[15%]  border-black border-b-2 border-t-2'></div>
+        <div className='bg-yellow-300 h-2.5 w-[10%]  border-black border-b-2 border-t-2'></div>
+        <div className='bg-white h-2.5 w-[15%] border-r-2 border-black border-b-2 border-t-2'></div>
     </div>
     </div>
   )

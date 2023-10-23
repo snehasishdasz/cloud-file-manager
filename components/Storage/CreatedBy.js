@@ -4,7 +4,7 @@ function CreatedBy() {
   return (
     <div
       className="p-2 bg-gray-950
-        rounded-lg text-center mt-5 bottom-0"
+        rounded-lg text-center mt-5 md:mt-16"
     >
       <h2 className="font-semibold text-[16px] text-white">
         Created with ❤️ by

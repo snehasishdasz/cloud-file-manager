@@ -4,7 +4,7 @@ import React from "react";
 
 function StorageMSG() {
   return (
-    <div className="w-full  p-1 bg-white border border-gray-200 rounded-lg shadow sm:p-4 dark:bg-gray-800 dark:border-gray-700 items-center justify-center mt-5">
+    <div className="w-full  p-1 bg-white border border-gray-200 rounded-lg shadow sm:p-4 dark:bg-gray-800 dark:border-gray-700 items-center justify-center mt-5 md:mt-20">
       <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
         What is It?
       </h5>
