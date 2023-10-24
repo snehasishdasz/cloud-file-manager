@@ -9,6 +9,8 @@ import '@/styles/globals.css'
 import { SessionProvider, useSession } from "next-auth/react"
 import { useState } from 'react'
 
+
+
 // const {data:session}=useSession();
 
 export default function App({
@@ -28,10 +30,10 @@ export default function App({
         <div className='col-span-2'>
           <Component {...pageProps} />
         </div>
-        
         <div className='bg-gray-800 p-5 order-first md:order-last'>
           <Storage/>
         </div>
+        
         
       
       </div>

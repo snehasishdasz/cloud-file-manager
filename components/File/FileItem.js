@@ -10,12 +10,24 @@ function FileItem({ file }) {
   const db=getFirestore(app)
   const image="/" + file.type + ".svg"
     const {showToastMsg,setShowToastMsg}=useContext(ShowToastContext)
-    const deleteFile=async(file)=>{
-      await deleteDoc(doc(db,"files",file.id.toString())).then(resp=>{
-              setShowToastMsg('File Deleted!!!')
-      })
-  }
+  //   const deleteFile=async(file)=>{
+  //     await deleteDoc(doc(db,"files",file.id.toString())).then(resp=>{
+  //             setShowToastMsg('File Deleted!!!')
+  //     })
+  // }
 
+  const deleteFile = async (file) => {
+    console.log('File:', file);
+  console.log('File ID:', file.id);
+    try {
+      await deleteDoc(doc(db, "files", file.id));
+      setShowToastMsg('File Deleted!!!');
+    } catch (error) {
+      console.error('Error deleting document:', error);
+      // Handle the error, show an error message, or take appropriate action.
+    }
+  }
+ 
   return (
     <div
       className="grid grid-cols-1
