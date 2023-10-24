@@ -1,4 +1,5 @@
 import React from 'react';
+import style from "../styles/login.module.css"
 import Image from 'next/image';
 import GIF from "./ezgif.com-video-to-gif.gif"
 import { useSession } from 'next-auth/react'
@@ -16,27 +17,26 @@ function login() {
     }
   },[session]);
   return (
-    <div className={style.body}>
-
-    <div className={style.container}>
+    <div className={style.body} >
+    <div className={style.container} >
       <div className={style.leftside}>
         <h1>Cloud Castle</h1>
         <p>"Store data across devices using our cloud platform."</p>
         
-        <button className="cta-button" onClick={()=>signIn()}>
+        <button className={style.ctabutton} onClick={()=>signIn()}>
         <Image src="/google.png" alt='google' width={200} height={200} />
           
         </button>
       </div>
-      <div className="right-side">
+      <div className={style.rightside}>
       <Image
-          className="landing-image"
+          className={style.landingimage}
           src={GIF}
           alt="Landing Page Image"
         />
       </div>
     </div>
-     </div>
+    </div>
   );
 }
 
