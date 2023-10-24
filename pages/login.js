@@ -17,9 +17,8 @@ function login() {
     }
   },[session]);
   return (
-    <div className={style.body}>
-
-    <div className={style.container}>
+    <div className={style.body} style={{position:'absolute', width:'100%'}}>
+    <div className={style.container} >
       <div className={style.leftside}>
         <h1>Cloud Castle</h1>
         <p>"Store data across devices using our cloud platform."</p>
