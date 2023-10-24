@@ -18,7 +18,7 @@ function login() {
   }, [session]);
 
   return (
-    <div className="bg-gradient" style={{ position: 'absolute', width: '100%' }}>
+    <div className="bg-gradient">
       <div className="container">
         <div className="left-side">
           <h1>Cloud Castle</h1>
