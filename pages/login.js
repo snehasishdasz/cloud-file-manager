@@ -22,7 +22,7 @@ function login() {
       <div className="container">
         <div className="left-side">
           <h1>Cloud Castle</h1>
-          <p>"Store data across devices using our cloud platform."</p>
+          <p>"Store files and data across devices using our cloud platform."</p>
           
           <button className="cta-button" onClick={() => signIn()}>
             <Image src="/google.png" alt='google' width={200} height={200} />
