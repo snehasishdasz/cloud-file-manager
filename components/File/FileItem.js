@@ -17,8 +17,6 @@ function FileItem({ file }) {
   // }
 
   const deleteFile = async (file) => {
-    console.log('File:', file);
-  console.log('File ID:', file.id);
     try {
       await deleteDoc(doc(db, "files", file.id));
       setShowToastMsg('File Deleted!!!');
