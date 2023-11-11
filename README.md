@@ -1,38 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    ⚡ CloudCastle: Next.js File Storage ⚡
+</h1>
 
-## Getting Started
 
-First, run the development server:
+<p align="center">
+  <img src="https://github.com/snehasishdasz/cloud-file-manager/assets/78856467/c1ed5b6e-4bdb-4d50-ae35-59091ca65176" alt="Login Page" width="400">
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<p align="center">
+  CloudCastle is a Next.js and Firebase-based file storage app, offering efficient file management while ensuring data security.
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **User-Friendly Interface**: Seamless user experience with an intuitive design.
+- **Gmail-Based Login**: Smooth authentication process via Gmail.
+- **Folder and File Management**: Create, organize, and upload files effortlessly.
+- **Firebase Storage**: Secure and reliable storage for uploaded files.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 📌Screenshots
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<p align="center">
+  <img src="https://github.com/snehasishdasz/cloud-file-manager/assets/78856467/1a44c835-9de6-49cc-94f2-ca2038cb507a" alt="Main Interface" width="800">
+  <img src="https://github.com/snehasishdasz/cloud-file-manager/assets/78856467/5295539f-da82-4ca4-a312-9d855f42593f" alt="Main Interface" width="800">
+  <img src="https://github.com/snehasishdasz/cloud-file-manager/assets/78856467/de1e91b7-53f3-49d1-b6d9-3b50c41e5ff6" alt="Main Interface" width="800">
+  
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## 📌Live Demo
 
-To learn more about Next.js, take a look at the following resources:
+Explore the live demo [Cloud-Castle](https://cloud-file-manager-two.vercel.app/login).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js
+- Firebase
+- CSS
+- Next.js Authentication
+- Tailwind CSS
+- npm
+- moment
+- daisyUI
+- Google Cloud
